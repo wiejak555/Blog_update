@@ -12,6 +12,7 @@ function titleClickHandler(event) {
         activeLink.classList.remove("active");
     }
     /* add class 'active' to the clicked link */
+
     event.preventDefault();
     const clickedElement = this;
     clickedElement.classList.add("active");
@@ -68,12 +69,16 @@ function generateTitleLinks() {
     /* get the article id */
 
     for (let article of articles) {
-        const id = article.getAttribute("id");
-        console.log(id);
+        const articleid = article.getAttribute("id");
+        console.log(articleid);
+        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+        console.log(articleTitle);
     }
 
 
     /* find the title element */
+
+
 
     /* get the title from the title element */
 
