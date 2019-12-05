@@ -73,6 +73,8 @@ function generateTitleLinks() {
         console.log(articleid);
         const articleTitle = article.querySelector(optTitleSelector).innerHTML;
         console.log(articleTitle);
+        const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+        console.log(linkHTML);
     }
 
 
