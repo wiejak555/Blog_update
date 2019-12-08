@@ -2,7 +2,7 @@
 
 function titleClickHandler(event) {
   console.log("Link was clicked!");
-  console.log(event);
+
 
   /* remove class 'active' from all article links  */
 
@@ -50,7 +50,8 @@ for (let link of links) {
 
 const optArticleSelector = ".post",
   optTitleSelector = ".post-title",
-  optTitleListSelector = ".titles";
+  optTitleListSelector = ".titles",
+  optArticleTagsSelector = ".post-tags .list";
 
 function generateTitleLinks() {
   /* remove contents of titleList */
@@ -78,13 +79,17 @@ function generateTitleLinks() {
       articleTitle +
       "</span></a></li>";
     console.log(linkHTML);
-    titleList.innerHTML = titleList.innerHTML + linkHTML;
+
   }
+
+  titleList.innerHTML = titleList.innerHTML + linkHTML;
+
 }
 
 for (let link of links) {
   link.addEventListener("click", linkHTML);
 }
+
 
 
 generateTitleLinks();
